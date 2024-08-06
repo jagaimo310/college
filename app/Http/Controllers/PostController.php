@@ -12,3 +12,10 @@ class PostController extends Controller
     {
         return view('posts.index')->with(['posts'=>$post->getPaginateByLimit()]);
     }
+    
+     public function show(Post $post)//インポートしたPostをインスタンス化して$postとして使用。
+    {
+         return view('posts.show')->with(['post'=>$post]);
+    }
+    
+}
