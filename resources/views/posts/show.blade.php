@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Blog</title>
+        <title>Blog Detail</title>
 
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
@@ -12,15 +12,11 @@
         
     </head>
     <body class="antialiased">
-        <h1>Blog name</h1>
-        <div class='posts'>
-            @foreach($posts as $post)
-            <div class='post' >
-                <a href = "/posts/{{$post->id}}" class='title'>{{ $post->title }}</a>
-                <p class='body'>{{ $post->body }}</p>
-            @endforeach
+        <div class='post' >
+            <P class ="title">{{ $post->title }}</P>
+            <p class='body'>{{ $post->body }}</p>
             </div>
+            <a href='/'>戻る</a>
         </div>
-        <div class='paginate'> {{ $posts -> links() }}  </div>
     </body>
 </html>
