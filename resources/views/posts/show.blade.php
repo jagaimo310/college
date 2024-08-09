@@ -13,8 +13,8 @@
     </head>
     <body class="antialiased">
         <div class='post' >
-            <P class ="title">{{ $post->title }}</P>
-            <p class='body'>{{ $post->body }}</p>
+            <P class ="title">{{$post->title}}</P>
+            <p class='body'>{{$post->body}}</p>
             </div>
             <a href='/'>戻る</a>
         </div>
