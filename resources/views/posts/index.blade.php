@@ -13,14 +13,19 @@
     </head>
     <body class="antialiased">
         <h1>Blog name</h1>
-        <div class='posts'>
+        <div class="posts">
             @foreach($posts as $post)
             <div class='post' >
-                <a href = "/posts/{{$post->id}}" class='title'>{{ $post->title }}</a>
-                <p class='body'>{{ $post->body }}</p>
+                <a href="/posts/{{$post->id}}" class='title'>{{$post->title}}</a>
+                <p class='body'>{{$post->body}}</p>
             @endforeach
             </div>
         </div>
-        <div class='paginate'> {{ $posts -> links() }}  </div>
+        
+        <div class="create">
+            <a href="/posts/create">create</a>
+        </div>
+        
+        <div class='paginate'> {{$posts -> links()}} </div>
     </body>
 </html>
